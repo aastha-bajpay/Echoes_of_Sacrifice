@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes of Sacrifice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Echoes of Sacrifice</h1>
+    <div id="instructions">
+        <p>The path will be revealed for 5 seconds. Memorize it!</p>
+        <p>Use Arrow Keys to move. Find Altars (blue) to see the path again by sacrificing a key.</p>
+    </div>
+    <div id="game-container"></div>
+    <div id="ui-container">
+        <h3>Abilities</h3>
+        <div id="ability-up" class="ability-active">▲ Up</div>
+        <div id="ability-down" class="ability-active">▼ Down</div>
+        <div id="ability-left" class="ability-active">◄ Left</div>
+        <div id="ability-right" class="ability-active">► Right</div>
+        <button id="restart-button">Restart</button>
+    </div>
+
+    <!-- Sacrifice Modal -->
+    <div id="sacrifice-modal" class="modal-hidden">
+        <div class="modal-content">
+            <h2>Altar of Sacrifice</h2>
+            <p>You must give up an ability to see the path.</p>
+            <div id="sacrifice-options"></div>
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="win-modal" class="modal-hidden">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>You have escaped the maze.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
