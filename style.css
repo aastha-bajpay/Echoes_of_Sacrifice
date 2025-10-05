@@ -1,0 +1,120 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(15, 30px); /* Level width */
+    grid-template-rows: repeat(15, 30px);    /* Level height */
+    border: 2px solid #333;
+    background-color: black;
+}
+
+.tile {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: black; /* Walls are invisible by default */
+}
+
+.wall.visible {
+    background-color: #888; /* Revealed wall color */
+    transition: background-color 0.5s;
+}
+
+.player {
+    background-color: #ff4136; /* Red */
+}
+
+.altar {
+    background-color: #0074d9; /* Blue */
+}
+
+.exit {
+    background-color: #2ecc40; /* Green */
+}
+
+#ui-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #222;
+}
+
+#ui-container h3 {
+    margin: 0 0 10px 0;
+}
+
+.ability-active {
+    color: #2ecc40; /* Green */
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.ability-sacrificed {
+    color: #ff4136; /* Red */
+    text-decoration: line-through;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#restart-button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Modal Styles */
+.modal-hidden {
+    display: none;
+}
+
+.modal-visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background-color: #111;
+    padding: 20px 40px;
+    border: 2px solid #eee;
+    text-align: center;
+}
+
+.sacrifice-button {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sacrifice-button:hover {
+    background-color: #c1332b;
+}
